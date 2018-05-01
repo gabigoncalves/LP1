@@ -1,7 +1,7 @@
 // 01-oi.c
 #include <stdio.h>
 
-int main (void) {
+int main () {
     int n1, n2
     printf ("Escolha um número n1:");
     scanf ("%d",&n1);
