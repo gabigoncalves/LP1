@@ -1,4 +1,5 @@
-//1 - Faça um programa que leia dois valores e exiba o maior valor lido.
+//Faça um programa que leia dois valores e exiba o maior valor lido.
+
 print ("Escolha um número:")
 n1 = input ()
 print ("Agora escolha outro número:")
