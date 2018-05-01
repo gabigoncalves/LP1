@@ -17,9 +17,3 @@ int main () {
     }
     return 0;
 }
-
-//02.c
-#include <stdio.h>
-
-int main () {
-    
