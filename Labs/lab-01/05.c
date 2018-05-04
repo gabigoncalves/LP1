@@ -7,7 +7,8 @@ int main () {
 	int soma;
 	printf ("Digite um número: ");
 	scanf ("%d", &num);
-
+	soma = num;
+	
 	while (num != 0) 
 	{
 		printf ("Digite um número: ");
