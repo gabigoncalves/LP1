@@ -8,10 +8,9 @@ int main () {
     int soma;
     printf ("Escreva um número: ");
     scanf ("%d",&n);
-    i = n*n;
-    soma = i;
+    soma = 0;
     for (i=1; i<=n; i++) {
-        soma = soma + i;
+        soma = soma + i*i;
         printf ("O somatório é: %d\n",soma);
     }
     return 0;
