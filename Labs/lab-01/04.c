@@ -3,19 +3,18 @@
 #include <stdio.h>	
 int main () {
 	float velocidade;
-	float milha = 1.6;
 	float kph;
 	float mph;
-	printf ("Qual a velocidade do carro em mph?");
+	printf ("Qual a velocidade do carro em mph? ");
 	scanf ("%f",&mph);
-	velocidade = mph*milha;
-	scanf ("%f",&velocidade);
+	velocidade = mph*1.6;
+	printf ("A velocidade do carro em Km/h é: %.2f\n", velocidade);	
 	if (80<=velocidade && velocidade<=100) {
-		printf ("MANTENHA. A velocidade do carro em Km é: %f\n",velocidade);
-	} else if (velocidade < 80) {
-		printf ("ACELERE. A velocidade do carro em Km é: %f\n",velocidade);
+		printf ("MANTENHA.");
+	} else if (velocidade < 80) { 
+		printf ("ACELERE.");
 	} else {
-		printf ("DESACELERE. A velocidade do carro em Km é: %f\n",velocidade);
+		printf ("DESACELERE.");
 	}
 	return 0;
 }
