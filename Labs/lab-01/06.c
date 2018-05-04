@@ -1,16 +1,18 @@
 //06.c
 
 #include <stdio.h>
+
 int main () {
     int n;
-    int i = n**2;
+    int i;
     int soma;
     printf ("Escreva um número: ");
-    scanf ("%d",n);
+    scanf ("%d",&n);
+    i = n*n;
     soma = i;
-    for x in range (1,n+1) {
+    for (i=1; i<=n; i++) {
         soma = soma + i;
         printf ("O somatório é: %d\n",soma);
     }
-    retun 0;
-}    
+    return 0;
+} 
