@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main () {
-	int times = 3;
+	int times = 20;
 	int vit = 3;
 	int emp = 1;
 	int der = 0;
