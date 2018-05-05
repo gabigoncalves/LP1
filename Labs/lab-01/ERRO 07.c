@@ -13,8 +13,8 @@ int main () {
 	int num_der = 0;
 	int i = 0;
 	int pontos;
-	int pontos_pior;
-	int pontos_melhor;
+	int menos_pontos = 0;
+	int mais_pontos = 1000;
 	char nome;
 	char nome_pior;
 	char nome_melhor;
@@ -29,19 +29,20 @@ int main () {
 		printf ("Digite o número de derrotas: ");
 		scanf ("%d", &num_der);
 		pontos = (num_vit*vit) + (num_emp*emp) + der;
-	}
-	if  (pontos <= 1) {
-		nome_pior = nome;
-		pontos_pior = pontos;
-	}
-	else if (pontos > 3) {
-		nome_melhor = nome;
-		pontos_melhor = pontos;
+	
+		if  (pontos > mais_pontos) {
+			mais_pontos = pontos;
+			nome_melhor = nome;
+		}
+		else if (pontos < menos_pontos) {
+			nome_melhor = nome;
+			menos_pontos = pontos;
+		}
 	}
 	printf ("O time com menos pontos é: %c\n",nome_pior);
-	printf ("A quantidade de pontos foi: %d\n",pontos_pior);
+	printf ("A quantidade de pontos foi: %d\n",menos_pontos);
 	printf ("O time com mais pontos é: %c\n",nome_melhor);
-	printf ("A quantidade de pontos foi: %d\n",pontos_melhor);
+	printf ("A quantidade de pontos foi: %d\n",mais_pontos);
 	i = i + 1;
 	return 0;
 }
