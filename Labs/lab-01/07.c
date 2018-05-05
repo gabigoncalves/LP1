@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main () {
-	int times = 20;
+	int times = 3;
 	int vit = 3;
 	int emp = 1;
 	int der = 0;
@@ -18,17 +18,17 @@ int main () {
 	char nome_pior;
 	char nome_melhor;
 
-	while (i < times) {
-	printf ("Digite o nome do time: \n");
-	scanf ("%c", &nome);
-	printf ("Digite o número de vitórias desse time: \n");
-	scanf ("%d", &num_vit);
-	printf ("Digite o número de empates: \n");
-	scanf ("%d", &num_emp);
-	printf ("Digite o número de derrotas: \n");
-	scanf ("%d", &num_der);
-	pontos = (num_vit*vit) + (num_emp*emp) + der;
-	
+	for (i; i < times; i++) {
+		printf ("Digite o nome do time: ");
+		scanf ("%c", &nome);
+		printf ("Digite o número de vitórias desse time: ");
+		scanf ("%d", &num_vit);
+		printf ("Digite o número de empates: ");
+		scanf ("%d", &num_emp);
+		printf ("Digite o número de derrotas: ");
+		scanf ("%d", &num_der);
+		pontos = (num_vit*vit) + (num_emp*emp) + der;
+	}
 	if  (pontos <= 1) {
 		nome_pior = nome;
 		pontos_pior = pontos;
