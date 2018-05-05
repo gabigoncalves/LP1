@@ -1,5 +1,4 @@
 //07.c
-//ERRO//
 
 #include <stdio.h>
 
@@ -35,10 +34,9 @@ int main () {
 			nome_pior = nome;
 		}
 	}
-	printf ("O time com menos pontos é: %c\n",nome_pior);
+	printf ("O time com menos pontos é: %c. ",nome_pior);
 	printf ("A quantidade de pontos foi: %d\n",menos_pontos);
-	printf ("O time com mais pontos é: %c\n",nome_melhor);
+	printf ("O time com mais pontos é: %c. ",nome_melhor);
 	printf ("A quantidade de pontos foi: %d\n",mais_pontos);
 	return 0;
 }
-
