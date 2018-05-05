@@ -14,7 +14,7 @@ int main () {
 	char nome_melhor;
 	char nome_pior;
 
-	for (i=0; i < 3; i++) {
+	for (i=0; i < 20; i++) {
 		printf ("Digite o nome do time: ");
 		scanf (" %c", &nome);
 		printf ("Digite o número de vitórias desse time: ");
