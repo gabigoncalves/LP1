@@ -44,7 +44,3 @@ int main () {
 	i = i + 1;
 	return 0;
 }
-	printf ("O time com mais pontos é: %d. Possui: %d\n",&nome_melhor,&pontos_melhor);
-	i = i + 1;
-	return 0;
-}
