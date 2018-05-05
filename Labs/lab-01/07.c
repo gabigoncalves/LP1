@@ -1,4 +1,5 @@
 //07.c
+//ERRO//
 
 #include <stdio.h>
 
