@@ -5,7 +5,7 @@ int main () {
 	int din = 1000;	
 	float preco;
 	float total;
-	printf ("Digite o preço do celular em dólares: ");
+	printf ("Digite o preço do celular em dólares: \n");
 	scanf ("%f",&preco);
 	total = preco/3.17; 
 	if (total <= din) {
