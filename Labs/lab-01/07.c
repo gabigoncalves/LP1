@@ -1,6 +1,7 @@
 //07.c
 
 #include <stdio.h>
+#include <string.h>
 
 int main () {
 	int num_vit = 0;
@@ -10,13 +11,13 @@ int main () {
 	int i;
 	int mais_pontos = 0;
 	int menos_pontos = 1000;
-	char nome;
-	char nome_melhor;
-	char nome_pior;
+	char nome[10];
+	char nome_melhor[10];
+	char nome_pior[10];
 
 	for (i=0; i < 20; i++) {
 		printf ("Digite o nome do time: ");
-		scanf (" %c", &nome);
+		scanf ("%s", nome);
 		printf ("Digite o número de vitórias desse time: ");
 		scanf ("%d", &num_vit);
 		printf ("Digite o número de empates: ");
@@ -27,16 +28,16 @@ int main () {
 		
 		if  (pontos > mais_pontos) {
 			mais_pontos = pontos;
-			nome_melhor = nome;
+			strcpy(nome_melhor, nome);
 		}
 		else if (pontos < menos_pontos) {
 			menos_pontos = pontos;
-			nome_pior = nome;
+			strcpy(nome_pior, nome);
 		}
 	}
-	printf ("O time com menos pontos é: %c. ",nome_pior);
+	printf ("O time com menos pontos é: %s. ",nome_pior);
 	printf ("A quantidade de pontos foi: %d\n",menos_pontos);
-	printf ("O time com mais pontos é: %c. ",nome_melhor);
+	printf ("O time com mais pontos é: %s. ",nome_melhor);
 	printf ("A quantidade de pontos foi: %d\n",mais_pontos);
 	return 0;
 }
