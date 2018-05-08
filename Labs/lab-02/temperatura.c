@@ -18,7 +18,7 @@ int main () {
 	}
 	media = soma_temp/50;
 
-	for (i=0; i< 5; i++) {
+	for (i=0; i< 50; i++) {
 		if (temp[i] > media) {
 			printf ("As temperaturas acima da média são: %d\n", temp[i]);
 			soma_media = soma_media + 1;
