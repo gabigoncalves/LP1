@@ -21,8 +21,7 @@ void leia (struct Personagem* p) {
 	int i;
 	printf ("Imagem do personagem: ");
 	scanf ("%s", (*p).imagem);
-	printf ("Pontuação: ");
-	scanf ("%d", &((*p).pontuacao));
+	(*p).pontuacao = 0;
 	leia_posicao(&(*p).posicao);
 }
 
@@ -34,7 +33,7 @@ int main (void) {
 		struct Personagem personagem;
 		leia(&personagem);
 		personagens[i] = personagem;
-		printf ("\nPersonagem: %s\nPontuação: %d\nPosição: (%d,%d)\n\n", personagem.imagem, personagem.pontuacao, personagem.posicao.x, personagem.posicao.y);
+		printf ("\nPersonagem: %s\nPosição: (%d,%d)\nPontuação: %d\n\n", personagem.imagem, personagem.posicao.x, personagem.posicao.y, personagem.pontuacao);
 	}
 	
 	return 0;
