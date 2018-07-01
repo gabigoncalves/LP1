@@ -15,27 +15,27 @@ void preenche (int arr[2][2]) {
 
 int media(int arr[2][2]){
 	int i, j;
-	float media = 0;
-	float soma = 0;
+	int media;
+	int soma = 0;
 
-  for(int i = 0; i < 2; i++){
+  	for(int i = 0; i < 2; i++){
 		for(int j = 0; j < 2; j++){
 			soma = soma + arr[i][j];
 		}
 	}
 	media = soma/4;
-	printf ("Média: %.2f\n", media);
 	return media;
 }
 
 int main () {
-	int arr[2][2];
-	preenche(arr);
-	for(int i = 0; i < 2; i++){
-		for(int j = 0; j < 2; j++){
-			printf("arr[%d][%d]= %d \n", i, j, arr[i][j]);
+	int arr_int[2][2], i, j;
+	preenche(arr_int);
+	int media_arr = media(arr_int);
+	for (i = 0; i < 2; i++) {
+		for (j = 0; j < 2; j++) {
+			printf("arr_int[%d][%d]= %d \n", i, j, arr_int[i][j]);
 		}
 	}
-	media(arr)
+	printf ("Média: %d\n", media_arr);
 	return 0;
 }
