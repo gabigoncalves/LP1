@@ -1,0 +1,62 @@
+
+Nome: Amarildo Batista da Costa
+Especialidade: Dermatologista
+E-mail: amarildo.costa@medico.com
+Telefone: (21) 2234-0989
+
+
+Nome: Amanda Silva Medeiros
+Especialidade: Nutricionista
+E-mail: amanda.medeiros@medico.com
+Telefone: (21) 2234-4455
+
+
+Nome: Bruna Lisboa Moreira
+Especialidade: Pediatra
+E-mail: bruna.moreira@medico.com
+Telefone: (21) 2234-6352
+
+
+Nome: Benedito Rui Barbosa
+Especialidade: Clínico Geral
+E-mail: benedito.barbosa@medico.com
+Telefone: (21) 2234-5433
+
+
+Nome: Emerson Farias Reis
+Especialidade: Alergista
+E-mail: emerson.reis@medico.com
+Telefone: (21) 2234-9042
+
+
+Nome: Heloísa Maria Junqueira
+Especialidade: Endocrinologista
+E-mail: heloisa.junqueira@medico.com
+Telefone: (21) 2234-9986
+
+
+Nome: Mario Hungaro Kross
+Especialidade: Neurocirurgião
+E-mail: mario.kross@medico.com
+Telefone: (21) 2234-7654
+
+
+Nome: Olívia Ribeiro Cunha
+Especialidade: Clínico geral 
+E-mail: olivia.cunha@medico.com
+Telefone: (21) 2234-3456
+
+
+Nome: Ricardo Oliveira Mundi
+Especialidade: Otorrinolaringologista
+E-mail: ricardo.mundi@medico.com
+Telefone: (21) 2234-9900
+
+
+Nome: Vivian Santana Cruz
+Especialidade: Ginecologista
+E-mail: vivian.cruz@medico.com
+Telefone: (21) 2234-1234
+
+
+Entre em contato com o ramal ou e-mail do médico que desejas para concluir o agendamento.
