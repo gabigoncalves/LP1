@@ -12,7 +12,6 @@ struct Nascimento {
 
 struct Pessoa {
 	char nome [30];
-	int idade;
 	float peso;
 	float altura;
 	char medico [30];
@@ -50,19 +49,29 @@ struct Pessoa cadastro (void) {
 	struct Pessoa p;
 	preenche_dados(&p);
 		
-	FILE *f = fopen("/tmp/cadastro.txt", "a");
+	FILE *f = fopen("/tmp/cadastro.bin", "a+b"); //Por que não está acrescentando ao arquivo?
 
-	fprintf(f, "Nome: %s\r\n", p.nome);
-	fprintf(f, "Nascimento: %d/%d/%d\r\n", p.n.dia, p.n.mes, p.n.ano);
-	fprintf(f, "Peso: %.2fKg\r\n", p.peso);
-	fprintf(f, "Altura: %.2fm\r\n", p.altura);
-	fprintf(f, "Nome do médico: %s\r\n", p.medico);
-	fprintf(f, "Mês da última consulta: %s\r\n\n\n", p.mes_ult_con);
-	
-	printf ("\nSEUS DADOS FORAM CADASTRADOS COM SUCESSO!\n ");
+	fwrite(&p.nome, sizeof(char), strlen(p.nome), f);
+	fwrite(&p.n.dia, sizeof(int), 1, f);
+	fwrite(&p.n.mes, sizeof(int), 1, f);
+	fwrite(&p.n.ano, sizeof(int), 1, f);
+	fwrite(&p.peso, sizeof(int), 1, f);
+	fwrite(&p.altura, sizeof(int), 1, f);
+	fwrite(&p.medico, sizeof(char), strlen(p.medico), f);
+	fwrite(&p.mes_ult_con, sizeof(char), strlen(p.mes_ult_con), f);
+	fwrite(&p, sizeof(struct Pessoa), 1, f);
 
-/*	printf ("\nNome: %s\nData de Nascimento: %d/%d/%d\nPeso: %.2fKg\nAltura: %.2fm\nNome do médico: %s\nMês da última consulta: %s\n\n", p.nome, p.n.dia, p.n.mes, p.n.ano, p.peso, p.altura, p.medico, p.mes_ult_con);
-*/	
+	fread(&p.nome, sizeof(char), strlen(p.nome), f);
+	fread(&p.n.dia, sizeof(int), 1, f);
+	fread(&p.n.mes, sizeof(int), 1, f);
+	fread(&p.n.ano, sizeof(int), 1, f);
+	fread(&p.peso, sizeof(int), 1, f);
+	fread(&p.altura, sizeof(int), 1, f);
+	fread(&p.medico, sizeof(char), strlen(p.medico), f);
+	fread(&p.mes_ult_con, sizeof(char), strlen(p.mes_ult_con), f);
+	fread(&p, sizeof(struct Pessoa), 1, f);
+
+	printf ("\nSEUS DADOS FORAM CADASTRADOS COM SUCESSO!\n");
 	fclose(f);
 	return p;
 }
