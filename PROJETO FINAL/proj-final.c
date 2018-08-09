@@ -13,9 +13,13 @@ int main (void) {
 	int pessoa_i = 2;
 
 	while (1) {
-		printf ("----------------------------------------------------------------- \n");
+		printf ("==================================================================\n");
 		printf ("\nBEM-VINDO(A) AO SISTEMA DE NOSSO CONSULTÓRIO!\n\n");
-		printf ("1 - Cadastro\n2 - Consulta de Dados\n3 - Agendamento de Consultas\n4 - Sair de nosso sistema\n\nDigite o número da operação correspondente que deseja realizar: ");
+		printf ("1 - Cadastro\n");
+		printf ("2 - Consulta de Dados\n");
+		printf ("3 - Agendamento de Consultas\n");
+		printf ("4 - Sair de nosso sistema\n\n");
+		printf ("Digite o número da operação correspondente que deseja realizar: ");
 		scanf("%d",&num);
 
 		if (num != 1 && num!= 2 && num != 3 && num != 4) {
@@ -37,14 +41,17 @@ int main (void) {
 		else if (num == 2) {
 			printf ("\nOpção 2 selecionada!\n\n");
 			printf ("----------------------- CONSULTA DE DADOS -----------------------\n\n");
-			char url[]="/tmp/cadastro.txt",
-			     info[1000];
-			FILE *f;
-	
-			f = fopen(url, "r");
-			while( (fgets(info, sizeof(info), f))!=NULL )
-			printf("%s", info);
-			fclose(f);
+
+			struct Pessoa p;
+			FILE* f = fopen ("/tmp/cadastro.bin", "rb");
+
+			printf ("Nome: %s\n", p.nome);
+			printf ("Nascimento:: %d/%d/%d\n", p.n.dia, p.n.mes, p.n.ano);
+			printf ("Altura: %.2fm\n", p.altura);
+			printf ("Peso: %.2fKg\n", p.peso);
+			printf ("Nome do(a) médico(a): %s\n", p.medico);
+			printf ("Mês da última consulta: %s\n\n", p.mes_ult_con);
+
 		}
 
 		/* Agendamento de Consultas */
@@ -66,22 +73,21 @@ int main (void) {
 	
 			else {
 				if (n == 1) {
-				char url[]="/tmp/medico.txt",
-			     		info[1000];
+				char url[]="/tmp/medico.txt", info[1000];
 				FILE *g;
 	
 				g = fopen(url, "r");
-				while( (fgets(info, sizeof(info), g))!=NULL )
-				printf("%s", info);
+					while( (fgets(info, sizeof(info), g))!=NULL) {
+						printf("%s", info);
+					}
 				fclose(g);
-
 				}
 			}
 		}
 
 		else if (num == 4) {
 			printf ("\nOpção 4 selecionada!\n\n");
-			printf ("-------------------------- VOLTE SEMPRE! --------------------------\n\n");
+			printf ("========================== VOLTE SEMPRE! ==========================\n\n");
 			exit(4);
 		}
 	}
